@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Alkatra&display=swap');
 
+html {
+  scroll-behavior: smooth;
+}
 * {
   margin: 0;
   padding: 0;
@@ -10,6 +13,9 @@
 body {
   background-image: url('./images/background2.jpg');
   background-size: cover;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
 }
 
 .topNav {
@@ -48,15 +54,26 @@ body {
   font-size: 70px;
   letter-spacing: 20px;
   text-shadow: 8px 8px 3px #252323;
+  transition: transform 0.2s;
 }
 
+.title__heading:hover {
+  transform: scale(1.1);
+}
 
+.title__heading:hover > .title__backwardsE {
+  transform: rotateZ(0deg);
+  padding: 0;
+  letter-spacing: 20px;
+}
 .title__backwardsE {
   display: inline-block;
   transform: rotateZ(180deg);
   padding: 0 0 5px 20px;
   letter-spacing: 0;
+  transition: all 0.2s;
 }
+
 
 .title__subTitle {
   font-weight: 600;
@@ -68,6 +85,7 @@ body {
   max-width: 100%;
   color:#d1d1d1;
   justify-content: space-between;
+  flex: 1 0 auto;
 }
 
 .biography__paragraphs {
@@ -132,3 +150,22 @@ body {
 .favorites__item a:hover {
   color: #999999;
 }
+
+.socials {
+  display: flex;
+  justify-content:center;
+  gap: 150px;
+  margin: 50px 0;
+}
+.socials a {
+  text-decoration: none;
+  color:#d1d1d1;
+  font-size: 35px;
+  transition: transform 0.5s;
+}
+
+.socials a:hover {
+  color: #369cf0;
+  transform: scale(1.2);
+}
+
