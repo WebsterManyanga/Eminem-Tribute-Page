@@ -30,7 +30,7 @@ body {
 }
 
 .topNav__link:hover {
-  font-size: 18px;
+  transform: scale(1.2);
 }
 
 .title {
@@ -44,7 +44,7 @@ body {
 .title:hover {
   cursor:default;
 }
-.title__heading {
+.title__heading  {
   font-size: 70px;
   letter-spacing: 20px;
   text-shadow: 8px 8px 3px #252323;
@@ -86,8 +86,10 @@ body {
   font-size: 40px;
 }
 
-.albums__heading {
+.albums__heading, .favorites__heading {
   font-size: 30px;
+  font-weight: 600;
+  letter-spacing: 5px;
 }
 
 .albums__list {
@@ -112,4 +114,21 @@ body {
 
 .albums__art:hover {
   transform: rotate(25deg);
+}
+
+.favorites__list {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.favorites__item a {
+  text-decoration: none;
+  letter-spacing: 5px;
+  color:#d1d1d1;
+  transition: color 0.5s;
+}
+
+.favorites__item a:hover {
+  color: #999999;
 }
