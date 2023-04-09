@@ -45,6 +45,7 @@ body {
   align-items: center;
   color: white;
   font-family: 'Open Sans', sans-serif;
+  margin-top: 50px;
 }
 
 .title:hover {
