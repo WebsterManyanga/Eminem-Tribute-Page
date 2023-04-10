@@ -15,14 +15,13 @@ body {
   background-size: cover;
   display: flex;
   flex-direction: column;
-  min-height: 100%;
+  min-height: 100%;;
 }
 
 .topNav {
   display: flex;
   justify-content: space-between;
   max-width: 100%;
-  padding: 5px 100px;
 }
 
 .topNav__link {
@@ -56,6 +55,7 @@ body {
   letter-spacing: 20px;
   text-shadow: 8px 8px 3px #252323;
   transition: transform 0.2s;
+  user-select: none;
 }
 
 .title__heading:hover {
@@ -79,6 +79,7 @@ body {
 .title__subTitle {
   font-weight: 600;
   letter-spacing: 2px;
+  user-select: none;
 }
 
 .biography {
@@ -116,7 +117,6 @@ body {
   margin-top: 30px;
   display: grid;
   grid-template-columns: 150px 150px;
-  gap: 0  100px ;
 }
 
 .albums__list figcaption {
@@ -154,8 +154,7 @@ body {
 
 .socials {
   display: flex;
-  justify-content:center;
-  gap: 150px;
+  justify-content:space-evenly;
   margin: 50px 0;
 }
 .socials a {
@@ -170,3 +169,50 @@ body {
   transform: scale(1.2);
 }
 
+@media screen and (max-width: 1000px) {
+  .topNav {
+  }
+  .topNav__link {
+    font-size: 4vw;
+  }
+  .title__heading {
+    font-size: 10vw;
+  }
+
+  .title__backwardsE {
+    transform: rotateZ(0deg);
+    letter-spacing: 20px;
+    padding: 0;
+    
+  }
+  .biography {
+    margin: 50px 0 0 0; 
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .biography__paragraphs {
+    width: 92%;
+  }
+
+  .albums, .favorites {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .albums__heading, .favorites__heading {
+    user-select: none;
+    letter-spacing: 20px;
+  }
+
+  .albums__list {
+    justify-content: space-between;
+  }
+  .albums__list figcaption {
+    user-select: none;
+  }
+  .albums__art:hover {
+    transform: rotate(0deg);
+  }  
+
+
+}
