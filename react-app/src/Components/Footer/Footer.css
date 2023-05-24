@@ -1,0 +1,16 @@
+.socials {
+  display: flex;
+  justify-content:space-evenly;
+  margin: 50px 0;
+}
+.socials a {
+  text-decoration: none;
+  color:#d1d1d1;
+  font-size: 35px;
+  transition: transform 0.5s;
+}
+
+.socials a:hover {
+  color: #369cf0;
+  transform: scale(1.2);
+}

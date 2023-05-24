@@ -1,0 +1,112 @@
+.biography {
+  display: flex;
+  max-width: 100%;
+  color:#d1d1d1;
+  justify-content: space-between;
+  flex: 1 0 auto;
+}
+
+.biography__paragraphs {
+  display: block;
+  width: 500px;
+  height: fit-content;
+  padding: 15px;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.377);
+  line-height: 25px;
+}
+
+
+
+.biography__paragraphs p::first-letter {
+  font-size: 40px;
+}
+
+.albums__heading, .favorites__heading {
+  font-size: 30px;
+  font-weight: 600;
+  letter-spacing: 5px;
+}
+
+.albums__list {
+  list-style-type: none;
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: 150px 150px;
+}
+
+.albums__list figcaption {
+  font-family: 'Alkatra', cursive;
+}
+
+.albums__art {
+  width: 125px;
+  height: 125px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px #252323;
+  transition: all 0.3s;
+}
+
+
+.favorites__list {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.favorites__item a {
+  text-decoration: none;
+  letter-spacing: 5px;
+  color:#d1d1d1;
+  transition: color 0.5s;
+}
+
+.favorites__item a:hover {
+  color: #999999;
+}
+
+
+@media screen and (max-width: 800px) {
+
+  .biography {
+    margin: 50px 0 0 0; 
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .biography__paragraphs {
+    width: 92%;
+  }
+
+  .albums, .favorites {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  .albums__heading, .favorites__heading {
+    user-select: none;
+    letter-spacing: 20px;
+  }
+
+  .albums__list {
+    justify-content: space-between;
+  }
+  .albums__list figcaption {
+    user-select: none;
+  }
+  .albums__art:hover {
+    transform: rotate(0deg);
+  }  
+
+  .favorites__heading {
+    width: 100%;
+  }
+
+}
+
+@media screen and (min-width: 700px) {
+  .albums__list {
+    grid-template-columns: repeat(3, 150px);
+  }
+
+}
