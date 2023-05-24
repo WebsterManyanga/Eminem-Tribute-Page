@@ -1,32 +1,51 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="style.css">
-  <title>Eminem</title>
-  <script src="https://kit.fontawesome.com/d26df188bf.js" crossorigin="anonymous"></script>
-</head>
-<body>
-  <button class="menu-bar" onclick="menuSlide(event)">
-    <i class="fa-solid"></i>
+import './App.css';
+import { useState } from 'react';
+import TheEminemShow from './images/TheEminemShow.jpg';
+import TheMarshallMatherLP from './images/TheMarshallMathersLP.jpg';
+import Revival from './images/Revival.jpg';
+import Encore from './images/Encore.jpg';
+import Kamikaze from './images/Kamikaze.jpg';
+import Recovery from './images/Recovery.jpg';
+import Relapse from './images/Relapse.jpg';
+import CurtainCall from './images/CurtainCall.jpg';
+import MusicToBeMurderedBy from './images/MusicToBeMurderedBy.jpg';
+
+
+
+
+function App() {
+  const [menuSlide, setMenuSlide] = useState('fa-house');
+
+  function slide() {
+    if (menuSlide === 'fa-house') {
+      setMenuSlide('fa-bars');
+    } else {
+      setMenuSlide('fa-house');
+    }
+  }
+
+  return (
+    <>
+      <button 
+        className={`menu-bar ${menuSlide}`} 
+        onClick={() => slide()}
+      >
+    <i className="fa-solid"></i>
   </button>
-  <nav class="topNav">
-    <a href="#biography" class="topNav__link">Biography</a>
-    <a href="#albums" class="topNav__link">Albums</a>
-    <a href="#favorites" class="topNav__link">Favorite Songs</a>
-    <a href="#socials" class="topNav__link">Social Media</a>
+  <nav className={`topNav ${menuSlide === 'fa-house' && 'hide-menu'}`}>
+    <a href="#biography" className="topNav__link">Biography</a>
+    <a href="#albums" className="topNav__link">Albums</a>
+    <a href="#favorites" className="topNav__link">Favorite Songs</a>
+    <a href="#socials" className="topNav__link">Social Media</a>
   </nav>
-  <hgroup class="title">
-    <h1 class="title__heading">EMIN<span class="title__backwardsE">E</span>M</h1>
-    <p class="title__subTitle">The Real Slim Shady</p>
+  <hgroup className="title">
+    <h1 className="title__heading">EMIN<span className="title__backwardsE">E</span>M</h1>
+    <p className="title__subTitle">The Real Slim Shady</p>
   </hgroup>
-  <article id="biography" class="biography">
-    <section class="biography__paragraphs">
-      <p class="biography__1">
-        Marshall Bruce Mathers III (born October 17, 1972), known professionally as Eminem (/ˌɛmɪˈnɛm/; often stylized as EMINƎM), is an American rapper, songwriter, and record producer. He is credited with popularizing hip hop in middle America and is critically acclaimed as one of the greatest rappers of all time.[2] Eminem's global success and acclaimed works are widely regarded as having broken racial barriers for the acceptance of white rappers in popular music. While much of his transgressive work during the late 1990s and early 2000s made him widely controversial, he came to be a representation of popular angst of the American underclass and has been cited as an influence for many artists of various genres.
+  <article id="biography" className="biography">
+    <section className="biography__paragraphs">
+      <p className="biography__1">
+        Marshall Bruce Mathers III (born October 17, 1972), known professionally as Eminem (/ˌɛmɪˈnɛm/; often stylized as EMINƎM), is an American rapper, songwriter, and record producer. He is credited with popularizing hip hop in middle America and is critically acclaimed as one of the greatest rappers of all time.[2] Eminem's global success and acclaimed works are widely regarded as having broken racial barriers for the acceptance of white rappers in popular music. While much of his transgressive work during the late 1990s and early 2000s made him widely controversial, he came to be a representation of popular angst of the American underclassName and has been cited as an influence for many artists of various genres.
   
   After the release of his debut album Infinite (1996) and the extended play Slim Shady EP (1997), Eminem signed with Dr. Dre's Aftermath Entertainment and subsequently achieved mainstream popularity in 1999 with The Slim Shady LP. His next two releases, The Marshall Mathers LP (2000) and The Eminem Show (2002), were worldwide successes and were both nominated for the Grammy Award for Album of the Year. After the release of his next album, Encore (2004), Eminem went on hiatus in 2005, largely due to a prescription drug addiction.[3] He returned to the music industry four years later with the release of Relapse (2009) and Recovery was released the following year. Recovery was the best-selling album worldwide of 2010, making it Eminem's second album, after The Eminem Show in 2002, to be the best-selling album of the year worldwide. In the following years, he released the US number one albums The Marshall Mathers LP 2 (2013), Revival (2017), Kamikaze (2018) and Music to Be Murdered By (2020).
   
@@ -41,7 +60,7 @@
   
   
   Eminem lived near 8 Mile Road in Detroit.
-  As a teenager, Eminem wrote letters to his father. Debbie said that they all came back marked "return to sender".[18] When he was a child, a bully named D'Angelo Bailey severely injured Eminem's head in an assault,[19] an incident which Eminem later recounted (with comic exaggeration) on the song "Brain Damage". Debbie filed a lawsuit against the public school for this in 1982. The suit was dismissed the following year by a Macomb County, Michigan judge, who said the schools were immune from lawsuits.[14] For much of his youth, Eminem and his mother lived in a working-class, primarily black, Detroit neighborhood. He and Debbie were one of three white households on their block, and Eminem was beaten several times by black youths.[18]
+  As a teenager, Eminem wrote letters to his father. Debbie said that they all came back marked "return to sender".[18] When he was a child, a bully named D'Angelo Bailey severely injured Eminem's head in an assault,[19] an incident which Eminem later recounted (with comic exaggeration) on the song "Brain Damage". Debbie filed a lawsuit against the public school for this in 1982. The suit was dismissed the following year by a Macomb County, Michigan judge, who said the schools were immune from lawsuits.[14] For much of his youth, Eminem and his mother lived in a working-className, primarily black, Detroit neighborhood. He and Debbie were one of three white households on their block, and Eminem was beaten several times by black youths.[18]
   
   As a child, he was interested in storytelling, aspiring to be a comic book artist before discovering hip hop.[20] Eminem heard his first rap song ("Reckless", featuring Ice-T) on the Breakin' soundtrack, a gift from Debbie's half-brother Ronnie Polkingharn. His uncle was close to the boy and later became a musical mentor to him. When Polkingharn committed suicide in 1991, Eminem stopped speaking publicly for days and did not attend his funeral.[18][21]
   
@@ -49,93 +68,99 @@
   
   At age 14, Eminem began rapping with high-school friend Mike Ruby; they adopted the names "Manix" and "M&M", the latter evolving into "Eminem".[21][14] Eminem sneaked into neighboring Osborn High School with friend and fellow rapper Proof for lunchroom freestyle rap battles.[25] On Saturdays, they attended open mic contests at the Hip-Hop Shop on West 7 Mile Road, considered "ground zero" for the Detroit rap scene.[18] Struggling to succeed in a predominantly black industry, Eminem was appreciated by underground hip hop audiences.[21][26][27] When he wrote verses, he wanted most of the words to rhyme; he wrote long words or phrases on paper and, underneath, worked on rhymes for each syllable. Although the words often made little sense, the drill helped Eminem practice sounds and rhymes.[23]
       </p>
-      <p class="biography__2">
+      <p className="biography__2">
         In 1988, he went by the stage name MC Double M and formed his first group New Jacks and made a self-titled demo tape with DJ Butter Fingers.[1][28][29] In 1989, they later joined Bassmint Productions who later changed their name to Soul Intent in 1992 with rapper Proof and other childhood friends.[30] They released a self-titled EP in 1995 featuring Proof.[21] Eminem also made his first music video appearance in 1992 in a song titled, "Do-Da-Dippity", by Champtown. Later in 1996, Eminem and Proof teamed up with four other rappers to form The Dirty Dozen (D12), who released their first album Devil's Night in 2001.[18]
   
   Eminem was soon signed to Jeff and Mark Bass's F.B.T. Productions and recorded his debut album Infinite for their independent Web Entertainment label.[31] The album was a commercial failure upon its release in 1996.[32] One lyrical subject of Infinite was his struggle to raise his newborn daughter, Hailie Jade Scott Mathers, on little money. During this period, Eminem's rhyming style, primarily inspired by rappers Nas, Esham and AZ, lacked the comically violent slant for which he later became known.[33] Detroit disc jockeys largely ignored Infinite and the feedback Eminem did receive ("Why don't you go into rock and roll?") led him to craft angrier, moodier tracks.[18] At this time Eminem and Kim Scott lived in a crime-ridden neighborhood and their house was robbed several times.[18] Eminem cooked and washed dishes for minimum wage at Gilbert's Lodge, a family-style restaurant at St. Clair Shores.[34] His former boss described him as becoming a model employee, as he worked 60 hours a week for six months after Hailie's birth.[14] He was fired shortly before Christmas and later said, "It was, like, five days before Christmas, which is Hailie's birthday. I had, like, forty dollars to get her something."[18] After the release of Infinite, his personal problems and substance abuse culminated in a suicide attempt.[21] By March 1997 he was fired from Gilbert's Lodge for the last time and lived in his mother's mobile home with Kim and Hailie.[14]
       </p>
     </section>
-    <section class="albums" id="albums">
-      <h1 class="albums__heading">ALBUMS</h1>
-      <ul class="albums__list">
+    <section className="albums" id="albums">
+      <h1 className="albums__heading">ALBUMS</h1>
+      <ul className="albums__list">
         <li>
           <figure>
-            <img src="./images/TheEminemShow.jpg" alt="the Eminem Show" class="albums__art">
+            <img src={TheEminemShow} alt="the Eminem Show" className="albums__art" />
           </figure>
           <figcaption>The Eminem Show</figcaption>
         </li>
         <li>
           <figure>
-            <img src="./images/TheMarshallMathersLP.jpg" alt="the Eminem Show" class="albums__art">
+            <img src={TheMarshallMatherLP} alt="the Eminem Show" className="albums__art" />
           </figure>
           <figcaption>The Marshall Mathers LP</figcaption>
         </li>
         <li>
           <figure>
-            <img src="./images/Revival.jpg" alt="the Eminem Show" class="albums__art">
+            <img src={Revival} alt="the Eminem Show" className="albums__art"/>
           </figure>
           <figcaption>Revival</figcaption>
         </li>
         <li>
           <figure>
-            <img src="./images/Encore.jpg" alt="the Eminem Show" class="albums__art">
+            <img src={Encore} alt="the Eminem Show" className="albums__art"/>
           </figure>
           <figcaption>Encore</figcaption>
         </li>
         <li>
           <figure>
-            <img src="./images/Kamikaze.jpg" alt="the Eminem Show" class="albums__art">
+            <img src={Kamikaze} alt="the Eminem Show" className="albums__art"/>
           </figure>
           <figcaption>Kamikaze</figcaption>
         </li>
         <li>
           <figure>
-            <img src="./images/Recovery.jpg" alt="the Eminem Show" class="albums__art">
+            <img src={Recovery} alt="the Eminem Show" className="albums__art" />
           </figure>
           <figcaption>Recovery</figcaption>
         </li>
         <li>
           <figure>
-            <img src="./images/Relapse.jpg" alt="the Eminem Show" class="albums__art">
+            <img src={Relapse} alt="the Eminem Show" className="albums__art"/>
           </figure>
           <figcaption>Relapse</figcaption>
         </li>
         <li>
           <figure>
-            <img src="./images/CurtainCall.jpg" alt="the Eminem Show" class="albums__art">
+            <img src={CurtainCall} alt="the Eminem Show" className="albums__art"/>
           </figure>
           <figcaption>Curtain Call</figcaption>
         </li>
         <li>
           <figure>
-            <img src="./images/MusicToBeMurderedBy.jpg" alt="the Eminem Show" class="albums__art">
+            <img src={MusicToBeMurderedBy} alt="the Eminem Show" className="albums__art"/>
           </figure>
           <figcaption>Music To Be Murdered By</figcaption>
         </li>
       </ul>
-      <section class="favorites" id="favorites">
-        <h1 class="favorites__heading">PERSONAL FAVORITES</h1>
-        <ol class="favorites__list">
-          <li class="favorites__item"><a href="https://youtu.be/a7YTB985oMA">Renegade</a></li>
-          <li class="favorites__item"><a href="https://youtu.be/o9K0lsK6qLM">Stan</a></li>
-          <li class="favorites__item"><a href="https://youtu.be/enM5rH6-uMA">Mosh</a></li>
-          <li class="favorites__item"><a href="https://youtu.be/skn7T_XPQnY">Darkness</a></li>
-          <li class="favorites__item"><a href="https://youtu.be/BdfpV-cIkuA">The Real Slim Shady</a></li>
-          <li class="favorites__item"><a href="https://youtu.be/KV2ssT8lzj8">No Love</a></li>
-          <li class="favorites__item"><a href="https://youtu.be/FjVjHkezTIM">Mockingbird</a></li>
-          <li class="favorites__item"><a href="https://youtu.be/HnEwvZYdAlE">When I'm Gone</a></li>
-          <li class="favorites__item"><a href="https://youtu.be/FxQTY-W6GIo">KillShot</a></li>
-          <li class="favorites__item"><a href="https://youtu.be/tD5oQQ-CQ4E">Haile's Song</a></li>
+      <section className="favorites" id="favorites">
+        <h1 className="favorites__heading">PERSONAL FAVORITES</h1>
+        <ol className="favorites__list">
+          <li className="favorites__item"><a href="https://youtu.be/a7YTB985oMA">Renegade</a></li>
+          <li className="favorites__item"><a href="https://youtu.be/o9K0lsK6qLM">Stan</a></li>
+          <li className="favorites__item"><a href="https://youtu.be/enM5rH6-uMA">Mosh</a></li>
+          <li className="favorites__item"><a href="https://youtu.be/skn7T_XPQnY">Darkness</a></li>
+          <li className="favorites__item"><a href="https://youtu.be/BdfpV-cIkuA">The Real Slim Shady</a></li>
+          <li className="favorites__item"><a href="https://youtu.be/KV2ssT8lzj8">No Love</a></li>
+          <li className="favorites__item"><a href="https://youtu.be/FjVjHkezTIM">Mockingbird</a></li>
+          <li className="favorites__item"><a href="https://youtu.be/HnEwvZYdAlE">When I'm Gone</a></li>
+          <li className="favorites__item"><a href="https://youtu.be/FxQTY-W6GIo">KillShot</a></li>
+          <li className="favorites__item"><a href="https://youtu.be/tD5oQQ-CQ4E">Haile's Song</a></li>
         </ol>
       </section>
     </section>
   </article>
-  <footer class="socials" id="socials">
-    <a href="https://www.facebook.com/eminem/"><i class="fa-brands fa-instagram"></i></a>
-    <a href="https://www.instagram.com/eminem/?hl=en"><i class="fa-brands fa-facebook"></i></a>
-    <a href="https://twitter.com/ShadyFansite"><i class="fa-brands fa-twitter"></i></a>
-    <a href="https://www.youtube.com/channel/UCfM3zsQsOnfWNUppiycmBuw"><i class="fa-brands fa-youtube"></i></a>
+  <footer className="socials" id="socials">
+    <a href="https://www.facebook.com/eminem/"><i className="fa-brands fa-instagram"></i></a>
+    <a href="https://www.instagram.com/eminem/?hl=en"><i className="fa-brands fa-facebook"></i></a>
+    <a href="https://twitter.com/ShadyFansite"><i className="fa-brands fa-twitter"></i></a>
+    <a href="https://www.youtube.com/channel/UCfM3zsQsOnfWNUppiycmBuw"><i className="fa-brands fa-youtube"></i></a>
   </footer>
-</body>
-<script src="./script.js"></script>
-</html>
+
+    </>
+  );
+}
+
+function menuSlide() {
+
+}
+export default App;

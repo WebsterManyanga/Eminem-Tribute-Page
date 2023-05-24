@@ -20,6 +20,7 @@ body {
 .menu-bar {
   display: none;
 }
+
 .topNav {
   display: flex;
   gap: 20%;
@@ -194,6 +195,12 @@ body {
     color: #fff;
     text-shadow: 5px 5px 2px #000;
     transition: text-shadow 0.4s;
+  }
+
+  .hide-menu {
+    transform: translateX(-100vw);
+    text-shadow: '5px 5px 2px #000';
+    transition: 'text-shadow 0.5s';
   }
 
   .fa-house {
