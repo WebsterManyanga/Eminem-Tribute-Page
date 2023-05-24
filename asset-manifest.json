@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/Eminem-Tribute-Page/static/css/main.8bfcc95f.css",
+    "main.js": "/Eminem-Tribute-Page/static/js/main.1b4cc4cb.js",
+    "static/js/787.b701888c.chunk.js": "/Eminem-Tribute-Page/static/js/787.b701888c.chunk.js",
+    "static/media/background2.jpg": "/Eminem-Tribute-Page/static/media/background2.ca1a89905d83ea9ffa2d.jpg",
+    "static/media/Revival.jpg": "/Eminem-Tribute-Page/static/media/Revival.e3e1bc487bc9271b5b1f.jpg",
+    "static/media/TheMarshallMathersLP.jpg": "/Eminem-Tribute-Page/static/media/TheMarshallMathersLP.fe6a27659a43b22e2dca.jpg",
+    "static/media/Kamikaze.jpg": "/Eminem-Tribute-Page/static/media/Kamikaze.75f4111e704150b146df.jpg",
+    "static/media/Encore.jpg": "/Eminem-Tribute-Page/static/media/Encore.06dc88d66148ecad2a31.jpg",
+    "static/media/TheEminemShow.jpg": "/Eminem-Tribute-Page/static/media/TheEminemShow.218c78ac7f71957488c4.jpg",
+    "static/media/CurtainCall.jpg": "/Eminem-Tribute-Page/static/media/CurtainCall.5264d5fd5b0f5257283e.jpg",
+    "static/media/Relapse.jpg": "/Eminem-Tribute-Page/static/media/Relapse.33cd36b77fd586a28f8e.jpg",
+    "static/media/MusicToBeMurderedBy.jpg": "/Eminem-Tribute-Page/static/media/MusicToBeMurderedBy.6a73fe6e1a9b47cc6cbc.jpg",
+    "static/media/Recovery.jpg": "/Eminem-Tribute-Page/static/media/Recovery.16d2de8d86c35394d9d7.jpg",
+    "index.html": "/Eminem-Tribute-Page/index.html",
+    "main.8bfcc95f.css.map": "/Eminem-Tribute-Page/static/css/main.8bfcc95f.css.map",
+    "main.1b4cc4cb.js.map": "/Eminem-Tribute-Page/static/js/main.1b4cc4cb.js.map",
+    "787.b701888c.chunk.js.map": "/Eminem-Tribute-Page/static/js/787.b701888c.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8bfcc95f.css",
+    "static/js/main.1b4cc4cb.js"
+  ]
+}
